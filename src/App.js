@@ -1,8 +1,12 @@
 import React from 'react'
+import { ThemeProvider } from './context/ThemeContext'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <div className='w-screen h-screen bg-black text-white'>App</div>
+    <ThemeProvider>
+      <Navbar />
+    </ThemeProvider>
   )
 }
 
