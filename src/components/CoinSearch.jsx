@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import CoinItem from '../components/CoinItem'
+import CoinItem from './CoinItem'
 import axios from 'axios'
 
-const CoinPage = () => {
+const CoinSearch = () => {
 
    const [coins, setCoins] = useState([])
 
@@ -66,4 +66,4 @@ const CoinPage = () => {
   )
 }
 
-export default CoinPage
+export default CoinSearch

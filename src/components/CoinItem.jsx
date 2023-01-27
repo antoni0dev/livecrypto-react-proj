@@ -1,13 +1,14 @@
 import React from 'react'
 import { AiOutlineStar } from 'react-icons/ai'
 import { Sparklines, SparklinesLine } from 'react-sparklines'
+import { Link } from 'react-router-dom'
 
 const CoinItem = ({ coin }) => {
     const { 
         market_cap_rank, 
         image, 
+        id,
         name, 
-        id, 
         symbol, 
         current_price, 
         price_change_percentage_24h, 
@@ -20,10 +21,12 @@ const CoinItem = ({ coin }) => {
         <td><AiOutlineStar /></td>
         <td>{market_cap_rank}</td>
         <td>
-            <div className='flex items-center '>
-                <img className='w-6 mr-2 rounded-full' src={image} alt={coin.id} />
-                <p className='hidden sm:table-cell'>{name}</p>
-            </div>
+            <Link to={`/coin/${id}`}>
+                <div className='flex items-center '>
+                    <img className='w-6 mr-2 rounded-full' src={image} alt={coin.id} />
+                    <p className='hidden sm:table-cell'>{name}</p>
+                </div>
+            </Link>
         </td>
         <td>{symbol.toUpperCase()}</td>
         <td>${current_price.toLocaleString()}</td>

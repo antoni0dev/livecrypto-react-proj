@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import CoinItem from './CoinItem'
 
 const Trending = () => {
     const [trendingCoins, setTrendingCoins] = useState([])
@@ -10,7 +9,6 @@ const Trending = () => {
     useEffect(() => {
         axios.get(url).then(res => {
             setTrendingCoins(res.data.coins)
-            console.log(res)
         }) 
     }, [])
 
@@ -19,8 +17,8 @@ const Trending = () => {
         <h1 className='text-2xl font-bold py-4'>Trending Coins</h1>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
-                trendingCoins.map(coin => (
-                    <div className='rounded-div flex justify-between p-4 hover:scale-105 ease-in-out duration-300'>
+                trendingCoins.map((coin, index) => (
+                    <div key={index} className='rounded-div flex justify-between p-4 hover:scale-105 ease-in-out duration-300'>
                         <div className='flex w-full items-center justify-between'>
                             <div className='flex items-center gap-4'>
                                 <img className='w-12 rounded-full' src={coin.item.small} alt='/' />

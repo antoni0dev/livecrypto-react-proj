@@ -1,5 +1,5 @@
 import React from 'react'
-import CoinSearch from './CoinSearch'
+import CoinSearch from '../components/CoinSearch'
 import Trending from '../components/Trending'
 
 const Home = ({ coins }) => {
