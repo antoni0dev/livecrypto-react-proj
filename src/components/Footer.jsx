@@ -1,63 +1,69 @@
-import React from 'react';
-import { AiOutlineInstagram } from 'react-icons/ai';
-import {
-  FaFacebookF,
-  FaGithub,
-  FaTiktok,
-  FaTwitter,
-} from 'react-icons/fa';
-import ThemeToggle from './ThemeToggle';
+import React from "react";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaFacebookF, FaGithub, FaTiktok, FaTwitter } from "react-icons/fa";
+import ThemeToggle from "./ThemeToggle";
 
 const Footer = () => {
   return (
-    <div className='rounded-div mt-8 pt-8 text-primary'>
-      <div className='grid md:grid-cols-2'>
-        <div className='flex justify-between w-full md:max-w-[300px] uppercase'>
+    <div className="rounded-div mt-8 pt-8 text-primary">
+      <div className="grid md:grid-cols-2">
+        <div className="flex justify-between w-full md:max-w-[300px] uppercase">
           <div>
-            <h2 className='font-bold'>Support</h2>
+            <h2 className="font-bold">Support</h2>
             <ul>
-              <li className='text-sm py-2'>Help Center</li>
-              <li className='text-sm py-2'>Contact Us</li>
-              <li className='text-sm py-2'>API Status</li>
-              <li className='text-sm py-2'>Documentation</li>
+              <li className="text-sm py-2">Help Center</li>
+              <li className="text-sm py-2">Contact Us</li>
+              <li className="text-sm py-2">API Status</li>
+              <li className="text-sm py-2">Documentation</li>
             </ul>
           </div>
           <div>
-            <h2 className='font-bold'>Info</h2>
+            <h2 className="font-bold">Info</h2>
             <ul>
-              <li className='text-sm py-2'>About Us</li>
-              <li className='text-sm py-2'>Careers</li>
-              <li className='text-sm py-2'>Invest</li>
-              <li className='text-sm py-2'>Legal</li>
+              <li className="text-sm py-2">About Us</li>
+              <li className="text-sm py-2">Careers</li>
+              <li className="text-sm py-2">Invest</li>
+              <li className="text-sm py-2">Legal</li>
             </ul>
           </div>
         </div>
-        <div className='text-right'>
-          <div className='w-full flex justify-end'>
-            <div className='w-full md:w-[300px] py-4 relative flex flex-col justify-center items-between text-center md:text-right'>
-              <div className='flex justify-center md:justify-end py-4 md:py-0 md:pb-4 mt-[-1rem]'>
+        <div className="text-right">
+          <div className="w-full flex justify-end">
+            <div className="w-full md:w-[300px] py-4 relative flex flex-col justify-center items-between text-center md:text-right">
+              <div className="flex justify-center md:justify-end py-4 md:py-0 md:pb-4 mt-[-1rem]">
                 <ThemeToggle />
               </div>
-              <div className='flex flex-col justify-center items-right'>
+              <div className="flex flex-col justify-center items-right">
                 <form>
-                  <div className='w-full'>
-                    <input className='bg-primary border border-input p-2 mr-2 w-full shadow-xl rounded-2xl md:w-auto' type='email' placeholder='Sign up for crypto news' />
-                    <button className='bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-xl hover:shadow-2xl md:w-auto my-2'>Sign up</button>
+                  <div className="w-full">
+                    <input
+                      className="bg-primary border border-input p-2 mr-2 w-full shadow-xl rounded-2xl md:w-auto"
+                      type="email"
+                      placeholder="Sign up for crypto news"
+                    />
+                    <button
+                      onClick={(e) => e.preventDefault()}
+                      className="bg-button text-btnText px-4 p-2 w-full rounded-2xl shadow-xl hover:shadow-2xl md:w-auto my-2"
+                    >
+                      Sign up
+                    </button>
                   </div>
                 </form>
               </div>
-              <div className='flex py-4 justify-between text-accent'>
-                <AiOutlineInstagram className='cursor-pointer'/>
-                <FaTiktok className='cursor-pointer'/>
-                <FaTwitter className='cursor-pointer'/>
-                <FaFacebookF className='cursor-pointer'/>
-                <FaGithub className='cursor-pointer'/>
+              <div className="flex py-4 justify-between text-accent">
+                <AiOutlineInstagram className="cursor-pointer" />
+                <FaTiktok className="cursor-pointer" />
+                <FaTwitter className="cursor-pointer" />
+                <FaFacebookF className="cursor-pointer" />
+                <FaGithub className="cursor-pointer" />
               </div>
             </div>
           </div>
         </div>
       </div>
-      <p className='text-center py-4 font-semibold text-gray-400'>Powered by CoinGecko. Developed by antoni0dev.</p>
+      <p className="text-center py-4 font-semibold text-gray-400">
+        Powered by CoinGecko. Developed by antoni0dev.
+      </p>
     </div>
   );
 };
